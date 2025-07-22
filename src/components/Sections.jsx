@@ -3,6 +3,7 @@ import Functions from './Functions'
 import Investments from './Investments'
 import Testimonies from './Testimonies'
 import About from './About'
+import Footer from './Footer';
 
 
 function Sections() {
@@ -14,6 +15,7 @@ function Sections() {
             <Investments />
             <Testimonies />
             <About />
+            <Footer />
         </div>
     )
 }

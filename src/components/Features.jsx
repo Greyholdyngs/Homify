@@ -50,27 +50,28 @@ function Features() {
     ]
 
     return(
-        <>
+        <div data-aos="fade-up">
             <div className="text-center">
-                <small className="bg-[#FAFAFA] text-[#2A9DAF] lg:py-3 lg:px-8 rounded-sm">Key Features</small>
+                <small className="bg-[#FAFAFA] text-[#2A9DAF] lg:py-3 lg:px-8 rounded-sm inline-block
+                                transition-transform duration=300 ease-in-out hover:scale-105 hover:shadow-sm">Key Features</small>
                 <h1 className="lg:my-5 lg:text-6xl text-2xl my-1 font-semibold">Unlock Powerful Features</h1>
                 <p className="lg:w-150 lg:text-lg m-auto text-[#646464] text-sm ">Streamline real estate investment and development with powerful tools tailored for you</p>
             </div>
             <div className='lg:flex justify-between py-15'>
                 <div >
-                    <img className='rounded-lg lg:w-180 lg:h-175' src={Image} alt="" />
+                    <img className='rounded-lg lg:w-155 lg:h-164' src={Image} alt="" />
                 </div>
-                <div className='sm:py-10 py-7 lg:py-0'>
+                <div className='flex flex-col text-left sm:py-10 py-7 lg:py-0'>
                     {
                     feature.map((item) => (
                         <div  className=''  key={item.id}>
-                            <div className='flex md:justify-center gap-5 lg:mb-10 sm:mb-8 mb-5'>
+                            <div className='flex lg:items-start md:justify-center gap-5 lg:mb-10 sm:mb-8 mb-5  transition-transform duration-400 ease-in-out hover:-translate-x-10'>
                                 <div className=' bg-[#F0F0F0] h-8 w-8 p-2 rounded'>
                                     <img src={item.vector} />
                                 </div>
-                                <div className=''>
-                                    <h1 className='font-medium lg:text-2xl text-xl mb-2'>{item.title}</h1>
-                                    <p className='w-70 text-[#646464] text-sm'>{item.text}</p>
+                                <div className='lg:text-left lg:w-100'>
+                                    <h1 className='font-medium lg:text-3xl text-xl mb-2'>{item.title}</h1>
+                                    <p className=' text-[#646464] text-sm'>{item.text}</p>
                                 </div>
                             </div>
                         </div>
@@ -78,7 +79,7 @@ function Features() {
                 }
                 </div>
             </div>
-        </>
+        </div>
 
     )
 }

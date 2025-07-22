@@ -2,8 +2,14 @@ import { Link } from "react-router-dom";
 import houseOne from "../assets/images/greenwood.png";
 import houseTwo from "../assets/images/honeyland.png";
 import houseThree from "../assets/images/lakeside.png";
+import AOS from 'aos'
+import { useEffect } from "react";
 
 function Investments () {
+
+    useEffect(() => {
+        AOS.refresh()
+    },[])
 
     const apartments = [
         {
@@ -36,16 +42,19 @@ function Investments () {
     ]
 
     return(
-        <div>
+        <div data-aos="fade-up">
             <div className="text-center">
-                <small className="bg-[#FFFFFF] text-[#2A9DAF] text-sm p-2">Investment Options</small>
+                <small className="bg-[#FFFFFF] text-[#2A9DAF] text-sm p-2 rounded-sm inline-block
+                                transition-transform duration=300 ease-in-out hover:scale-105 hover:shadow-sm">Investment Options</small>
                 <h1 className="font-semibold lg:text-6xl md:text-3xl sm:text-2xl text-xl  my-5">Explore Investment</h1>
                 <p className="text-[#646464] text-base">Start owning a property for as low as  ₦2,000,0000</p>
             </div>
-            <div className="lg:flex md:flex gap-10 my-10">
+            <div className="lg:flex md:flex gap-6 my-10">
                 {
                    apartments.map((places) => (
-                    <div className="bg-[#FFFFFF] py-5 px-5 rounded-lg lg:w-250 md:w-200 lg:text-left md:text-left sm:text-center text-center">
+                    <div className="bg-[#FFFFFF] py-5 px-5 rounded-lg lg:w-250 md:w-200 
+                                    lg:text-left md:text-left sm:text-center text-center
+                                    transition-transform duration-700 ease-in-out hover:scale-110 hover:shadow-xl">
                         <img className="rounded-lg w-85 m-auto" src={places.image} alt="house image" />
                         <div className="flex justify-between lg:gap-10 md:gap-7 my-2 md:text-sm md:items-center lg:text-base font-medium">
                             <h5>{places.title}</h5>
